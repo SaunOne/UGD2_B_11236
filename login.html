@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UGD</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="contentNav">
+                <li>
+                    <img src="images/logoB.png" alt="">
+                </li>
+                <li><a href="login.html">Halaman Login</a></li>
+                <li><a href="register.html">Halaman Register</a></li>
+                <li class="searchNav">
+                    <input class="inNav" type="text" placeholder="Search">
+                    <button>Search</button>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <div class="login">
+        <h1 class="titleLogin">LOGIN</h1> 
+        <form id="loginForm">
+            <li class="username">
+                <p>Email</p>
+                <input type="text" placeholder="Masukkan Email" id="email" name="email">
+            </li>
+            <li class="password">
+                <p>Password</p>
+                <input type="password" placeholder="Masukkan Password" id="password" >
+            </li>
+            <li >
+                <div class="remember">
+                    <input type="checkbox" id="saveAccount" value=0>
+                    <p>Remember Me</p>
+                    <a id="forgetPassword">Forget Password</a>
+                </div>
+                
+            </li>
+            <li>
+                <input type="submit" id="loginButton" name="login"></input>
+            </li>
+            
+        </form>
+    </div>
+    <script>
+        
+        function resetPassword(){
+
+        }
+
+        function cekLogin(email,password){
+            if(email == "" && password == ""){
+                alert("Email/Password Tidak Boleh Kosong!");
+            } else if(email == "210711236@gmail.com"){
+                if(password == "12345678"){
+                    alert("Login Berhasil");
+                    return 1;
+                } else {
+                    alert("Password Salah!");
+                }
+                
+            } else {
+                alert("Email Tidak Terdaftar!");
+            }
+            return 0;
+        };
+
+        const resetButton = document.getElementById("forgetPassword");
+
+        resetButton.addEventListener("click", function (){
+            alert(`Email : 210711236@gmail.com \nPassword : 12345678`);
+        });
+
+        const submitButton = document.getElementById("loginButton");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password"); 
+
+        submitButton.addEventListener("click",function(e){
+            cekLogin(email.value,password.value);
+        });
+
+    </script>
+</body>
+</html>

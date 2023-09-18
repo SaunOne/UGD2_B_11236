@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="contentNav">
+                <li>
+                    <img src="images/logoB.png" alt="">
+                </li>
+                <li><a href="login.html">Halaman Login</a></li>
+                <li><a href="register.html">Halaman Register</a></li>
+                <li class="searchNav">
+                    <input class="inNav" type="text" placeholder="Search">
+                    <button>Search</button>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <div class="container">
+        <form class="formulir" id="formId">
+            <div class="h"></div>
+            <div class="row1">
+                <h1>Formulir Registrasi Data Mahasiswa</h1>
+            </div>
+            <div class="row2">
+                <div class="col">
+                    <p>Nama Mahasiswa</p>
+                    <input type="text" placeholder="Masukkan Nama" id="namaId">
+                </div>
+                <div class="col">
+                    <p>Nomor Induk Mahasiswa</p>
+                    <input type="text" placeholder="Masukkan NIM" id="nimId">
+                </div>
+                <div class="col">
+                    <p>Program Studi</p>
+                    <select name="" id="prodiId">
+                        <option value="" disable selected>Pilih Prodi</option>
+                        <option value="Pordi 1">Prodi 1</option>
+                        <option value="Pordi 2">Prodi 2</option>
+                        <option value="Pordi 3">Prodi 3</option>
+                    </select>
+                </div>
+            </div>
+                
+            <div class="row2">
+                <div class="col">
+                    <p>Tanggal Lahir</p>
+                    <input type="date" placeholder="dd/mm/yyyy" id="dateId">
+                </div>
+                <div class="col2">
+                    <p>Nomor Telepon</p>
+                    <input type="number" placeholder="Masukkan Nomor Telepone" id="tlpId">
+                </div>
+                
+            </div>
+                
+            <div class="row2">
+                <div class="col2">
+                    <p>Email</p>
+                    <input type="email" placeholder="Masukkan Nomor Telepone" id="emailId">
+                </div>
+                <div class="col">
+                    <p>Password</p>
+                    <input type="password" placeholder="Masukkan Password" id="passId">
+                    <img class="hide" id="hideId" src="images/hide.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col3">
+                    <p>Photo</p>
+                    <label class="input">
+                        <input type="file" id="photoId">
+                    </label>
+                    
+                </div>
+            </div>
+            <div class="row3">
+                <div class="col4">
+                    <h1>Jenis Kelamin</h1>
+                    <input type="radio" name="gender" id="maleId" value="Male">
+                    <p>Laki Laki</p>
+                    <input type="radio" name="gender" id="femaleId" value="Female">
+                    <p>Perempuan</p>                   
+                </div>
+            </div>  
+            <div class="row3">
+                <div class="col5">
+                    <h1>Hal Favorit</h1>
+                    <li>
+                        <input type="checkbox" name="hoby" id="cBox" value="Bermain Game">
+                        <p>Bermain Game</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="hoby" id="cBox" value="Menonton Film">
+                        <p>Menonton Film</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="hoby" id="cBox" value="Olahraga">
+                        <p>Olaharaga</p>  
+                    </li>
+                    
+                    
+                                   
+                </div>
+                 
+            </div>
+                
+            <div class="row4">
+                <div class="col">
+                    <h1>Deskripsi</h1>
+                    <textarea placeholder="Tuliskan Deskripsi Disini" name="deskripsi" id="deskripsiId" cols="30" rows="10">
+                       
+                    </textarea>
+                </div>
+            </div>
+                
+            <div class="row2">
+                <div class="col">
+                    <button class="reset" id="resetId">Reset</button>
+                    <button class="submit" id="submitId">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="skriptRegister.js"></script>
+</body>
+</html>.
